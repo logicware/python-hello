@@ -7,8 +7,9 @@ def hello_world(request):
     name = os.environ.get('NAME')
     if name == None or len(name) == 0:
         name = "world"
-    print ("Name = " + name)    
-    message = "Hola, " + name + "!\n"
+    print ("Name: " + name)    
+    message = "Hello, " + name + "!\n"
+    print ("Sending response...")    
     return Response(message)
 
 if __name__ == '__main__':
